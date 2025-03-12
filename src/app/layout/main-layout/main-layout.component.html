@@ -1,21 +1,47 @@
-<mat-sidenav-container class="app-container">
-  <!-- Menú lateral -->
-  <mat-sidenav #sidenav mode="side" opened>
-    <mat-nav-list>
-      <a mat-list-item routerLink="/alarms">Alarmas</a>
-      <a mat-list-item routerLink="/contacts">Contactos</a>
-      <a mat-list-item routerLink="/logout">Cerrar Sesión</a>
-    </mat-nav-list>
-  </mat-sidenav>
+<div class="main-layout">
+  <!-- HEADER -->
+  <mat-toolbar color="primary" class="header">
+    <!-- Ícono alineado a la izquierda -->
+    <img src="assets/icono-alarm-connect.png" alt="Alarm Connect Logo" class="app-icon">
 
-  <!-- Contenido Principal -->
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <span>Alarm Connect</span>
-    </mat-toolbar>
-
-    <div class="content">
-      <router-outlet></router-outlet>
+    <!-- Contenedor centrado para el título -->
+    <div class="header-center">
+      <span class="header-title">Alarm Connect</span>
     </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+
+    <!-- Avatar alineado a la derecha -->
+    <div class="avatar-container">
+      <span class="user-name">Pedro</span>
+      <div class="avatar-info">
+        <img src="assets/avatar.jpeg" alt="Usuario" class="avatar">
+        <a class="profile-link" href="#">Mi Perfil</a>
+      </div>
+    </div>
+  </mat-toolbar>
+
+  <!-- CONTENEDOR PRINCIPAL CON MENÚ Y CONTENIDO -->
+  <mat-sidenav-container class="app-container">
+    <!-- MENÚ LATERAL -->
+    <mat-sidenav #sidenav mode="side" opened class="side-menu">
+      <mat-nav-list>
+        <a mat-list-item routerLink="/alarms">
+          <mat-icon>notifications</mat-icon>
+          Alarmas
+        </a>
+        <a mat-list-item routerLink="/contacts">
+          <mat-icon>group</mat-icon>
+          Contactos Confianza
+        </a>
+        <a mat-list-item routerLink="/logout">
+          <mat-icon>logout</mat-icon>
+          Cerrar Sesión
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <mat-sidenav-content class="content">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

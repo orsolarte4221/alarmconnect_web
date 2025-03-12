@@ -1,11 +1,121 @@
-.app-container {
+.main-layout {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
 }
 
-mat-sidenav {
+.header {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribuye los elementos */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #f4f4f9;
+  padding: 0 20px;
+}
+
+/* Ícono de la app */
+.app-icon {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  margin-left: 50px;
+}
+
+/* Contenedor para centrar el título */
+.header-center {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+/* Estilo del título */
+.header-title {
+  font-size: 24px;
+}
+
+/* Avatar alineado a la derecha */
+.avatar-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre el nombre y el avatar */
+  margin-right: 50px;
+}
+
+/* Imagen del avatar */
+.avatar-info {
+  display: flex;
+  flex-direction: column; /* Asegura que "Mi Perfil" quede debajo del avatar */
+  align-items: center;
+  text-align: center;
+}
+
+.avatar {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+/* Nombre del usuario (a la izquierda del avatar) */
+.user-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Enlace "Mi Perfil" debe estar debajo del avatar */
+.profile-link {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  margin-top: 5px; /* Espacio entre el avatar y el enlace */
+  display: block; /* Para que ocupe toda la línea */
+}
+
+.profile-link:hover {
+  text-decoration: underline;
+}
+
+/* Ajuste del contenido */
+.app-container {
+  display: flex;
+  flex-grow: 1;
+  height: calc(100vh - 130px);
+  margin-top: 130px;
+}
+
+.side-menu {
   width: 250px;
+  background: #f4f4f9;
+  padding: 20px; /* Espaciado de 20px en todos los lados */
+  box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
 }
 
 .content {
+  position: relative; /* Permite que el pseudo-elemento se posicione correctamente */
+  flex-grow: 1;
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinea el contenido correctamente */
+}
+
+/* Usa un pseudo-elemento para aplicar la opacidad solo al fondo */
+.content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/assets/background_clock.jpg') repeat;
+  background-size: 270px;
+  opacity: 0.05; /* Hace que el fondo sea tenue */
+  z-index: -1; /* Mantiene el fondo detrás del contenido */
 }
