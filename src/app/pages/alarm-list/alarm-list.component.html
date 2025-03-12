@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-title>Lista de Alarmas</mat-card-title>
+  <mat-list>
+    <mat-list-item *ngFor="let alarm of alarms">
+      <mat-icon matListIcon>notifications</mat-icon>
+      <h3 matLine>{{ alarm.name }}</h3>
+      <p matLine>{{ alarm.time | date:'shortTime' }}</p>
+      <mat-chip [color]="alarm.priority">{{ alarm.priority | uppercase }}</mat-chip>
+      <button mat-icon-button (click)="editAlarm(alarm)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button (click)="deleteAlarm(alarm)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
+

@@ -1,0 +1,21 @@
+<mat-sidenav-container class="app-container">
+  <!-- Menú lateral -->
+  <mat-sidenav #sidenav mode="side" opened>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/alarms">Alarmas</a>
+      <a mat-list-item routerLink="/contacts">Contactos</a>
+      <a mat-list-item routerLink="/logout">Cerrar Sesión</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Contenido Principal -->
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <span>Alarm Connect</span>
+    </mat-toolbar>
+
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
