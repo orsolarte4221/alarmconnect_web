@@ -13,5 +13,8 @@ export class NuevaAlarmaTipoComponent {
   seleccionarTipo(tipo: string) {
     console.log('Tipo de alarma seleccionado:', tipo);
     //TODO: Guardar el tipo de alarma en el servicio de alarma
+
+    this.router.navigate(['/crear-alarma'], { queryParams: { tipo: tipo } });
+
   }
 }

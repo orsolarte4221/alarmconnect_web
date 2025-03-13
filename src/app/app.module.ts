@@ -16,6 +16,8 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatTableModule } from '@angular/material/table';
 import { NuevaAlarmaTipoComponent } from './pages/nueva-alarma-tipo/nueva-alarma-tipo.component';
 import { CrearAlarmaComponent } from './pages/crear-alarma/crear-alarma.component';
+import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { CrearAlarmaComponent } from './pages/crear-alarma/crear-alarma.componen
     MatCardModule,
     MatButtonModule,
     MatChipsModule,
-    MatTableModule
+    MatTableModule,
+    FormsModule,
+    MatSnackBarModule,
   ],
   providers: [
     provideAnimationsAsync()

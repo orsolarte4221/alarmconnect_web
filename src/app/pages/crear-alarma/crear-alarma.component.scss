@@ -79,3 +79,38 @@ input, select, button {
 .guardar-btn:hover {
   background-color: #3f51b5;
 }
+
+/* 🔹 Ajustar el estilo de la fuente en todos los inputs, incluyendo datetime-local */
+input, select, button {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px; /* 📌 Tamaño de letra uniforme */
+  font-family: 'Arial', sans-serif; /* 📌 Usa la misma fuente que los otros elementos */
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* 🔹 Aplicar el mismo estilo al input datetime-local */
+input[type="datetime-local"] {
+  font-size: 16px; /* 📌 Mantener el tamaño del texto */
+  font-family: 'Arial', sans-serif; /* 📌 Fuente consistente */
+  color: #333; /* 📌 Color del texto */
+  background-color: white; /* 📌 Mantener el fondo blanco */
+  border: 1px solid #ccc; /* 📌 Bordes iguales a los demás */
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* 🔹 Ajustar el color del placeholder en datetime-local */
+input[type="datetime-local"]::placeholder {
+  color: #888; /* 📌 Color gris para el placeholder */
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* 🔹 Ajustar el icono del selector de fecha */
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: invert(40%); /* 📌 Hace que el icono sea más visible en fondos claros */
+  cursor: pointer;
+}
+

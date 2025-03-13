@@ -13,8 +13,9 @@
 
     <div class="form-group">
       <label for="fecha">Fecha y Hora</label>
-      <input type="datetime-local" id="fecha">
+      <input type="datetime-local" id="fecha" [(ngModel)]="fechaActual">
     </div>
+
 
     <div class="form-group">
       <label>Nota de Voz</label>
@@ -53,6 +54,6 @@
       </select>
     </div>
 
-    <button type="submit" class="guardar-btn">Guardar</button>
+    <button type="button" class="guardar-btn" (click)="guardarYRedirigir()">Guardar</button>
   </form>
 </div>
