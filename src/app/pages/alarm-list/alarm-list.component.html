@@ -6,12 +6,34 @@
 
   <div *ngIf="contenido === 'lleno'">
     <h5>Lista de Alarmas</h5>
-    <p class="day-label">Hoy</p>
+    <div class="day-header">
+      <p class="day-label">Hoy</p>
+      <button mat-raised-button color="primary" routerLink="/nueva-alarma">Nueva Alarma</button>
+    </div>
+
+    <div class="table-wrapper">
     <table mat-table [dataSource]="alarmsToday" class="mat-elevation-z8">
+
       <ng-container matColumnDef="priority">
         <th mat-header-cell *matHeaderCellDef> Prioridad </th>
         <td mat-cell *matCellDef="let alarm">
-          <mat-chip [ngClass]="alarm.priority.toLowerCase()">{{ alarm.priority }}</mat-chip>
+          <div class="priority">
+            <!-- Ícono de Prioridad -->
+            <svg class="priority-icon"
+                 [ngClass]="{
+                   'priority-icon-alta': alarm.priority === 'Alta',
+                   'priority-icon-media': alarm.priority === 'Media',
+                   'priority-icon-baja': alarm.priority === 'Baja'
+                 }"
+                 viewBox="0 0 24 24">
+              <polygon *ngIf="alarm.priority === 'Alta'" points="12,2 22,22 2,22"></polygon>
+              <polygon *ngIf="alarm.priority === 'Media'" points="12,2 22,12 12,22 2,12"></polygon>
+              <polygon *ngIf="alarm.priority === 'Baja'" points="2,2 22,2 12,22"></polygon>
+            </svg>
+
+            <!-- Texto de la prioridad -->
+            <span class="priority-text">{{ alarm.priority }}</span>
+          </div>
         </td>
       </ng-container>
 
@@ -46,13 +68,33 @@
       </ng-container>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="alarm-row"></tr>
     </table>
+  </div>
 
     <p class="day-label">Mañana</p>
+
+    <div class="table-wrapper">
     <table mat-table [dataSource]="alarmsTomorrow" class="mat-elevation-z8">
+
       <ng-container matColumnDef="priority">
         <th mat-header-cell *matHeaderCellDef> Prioridad </th>
         <td mat-cell *matCellDef="let alarm">
-          <mat-chip [ngClass]="alarm.priority.toLowerCase()">{{ alarm.priority }}</mat-chip>
+          <div class="priority">
+            <!-- Ícono de Prioridad -->
+            <svg class="priority-icon"
+                 [ngClass]="{
+                   'priority-icon-alta': alarm.priority === 'Alta',
+                   'priority-icon-media': alarm.priority === 'Media',
+                   'priority-icon-baja': alarm.priority === 'Baja'
+                 }"
+                 viewBox="0 0 24 24">
+              <polygon *ngIf="alarm.priority === 'Alta'" points="12,2 22,22 2,22"></polygon>
+              <polygon *ngIf="alarm.priority === 'Media'" points="12,2 22,12 12,22 2,12"></polygon>
+              <polygon *ngIf="alarm.priority === 'Baja'" points="2,2 22,2 12,22"></polygon>
+            </svg>
+
+            <!-- Texto de la prioridad -->
+            <span class="priority-text">{{ alarm.priority }}</span>
+          </div>
         </td>
       </ng-container>
 
@@ -90,13 +132,32 @@
       </ng-container>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="alarm-row"></tr>
     </table>
+  </div>
 
     <p class="day-label">Proximamente</p>
+    <div class="table-wrapper">
     <table mat-table [dataSource]="alarmsCommingSoon" class="mat-elevation-z8">
+
       <ng-container matColumnDef="priority">
         <th mat-header-cell *matHeaderCellDef> Prioridad </th>
         <td mat-cell *matCellDef="let alarm">
-          <mat-chip [ngClass]="alarm.priority.toLowerCase()">{{ alarm.priority }}</mat-chip>
+          <div class="priority">
+            <!-- Ícono de Prioridad -->
+            <svg class="priority-icon"
+                 [ngClass]="{
+                   'priority-icon-alta': alarm.priority === 'Alta',
+                   'priority-icon-media': alarm.priority === 'Media',
+                   'priority-icon-baja': alarm.priority === 'Baja'
+                 }"
+                 viewBox="0 0 24 24">
+              <polygon *ngIf="alarm.priority === 'Alta'" points="12,2 22,22 2,22"></polygon>
+              <polygon *ngIf="alarm.priority === 'Media'" points="12,2 22,12 12,22 2,12"></polygon>
+              <polygon *ngIf="alarm.priority === 'Baja'" points="2,2 22,2 12,22"></polygon>
+            </svg>
+
+            <!-- Texto de la prioridad -->
+            <span class="priority-text">{{ alarm.priority }}</span>
+          </div>
         </td>
       </ng-container>
 
@@ -132,6 +193,7 @@
 
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="alarm-row"></tr>
     </table>
+    </div>
 
   </div>
 </div>

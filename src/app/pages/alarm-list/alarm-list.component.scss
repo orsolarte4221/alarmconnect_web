@@ -24,7 +24,7 @@ html, body {
   width: 100%;
   max-width: 800px;
   margin-top: 10px;
-  margin-bottom: 30px; /* Espacio entre tablas */
+  margin-bottom: 20px; /* Espacio entre tablas */
 }
 
 
@@ -33,16 +33,34 @@ mat-chip {
   color: white;
 }
 
-.baja {
-  background-color: blue;
+.priority {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-.media {
-  background-color: orange;
+/* Tamaño y posición de los íconos */
+.priority-icon {
+  width: 16px;
+  height: 16px;
 }
 
-.alta {
-  background-color: red;
+/* Estilos específicos por prioridad */
+.priority-icon-alta {
+  fill: #BA1A1A;
+}
+
+.priority-icon-media {
+  fill: #71B177;
+}
+
+.priority-icon-baja {
+  fill: #1D6586;
+}
+
+/* El texto de la prioridad se mantiene sin color */
+.priority-text {
+  color: inherit;
 }
 
 .new-alarm-button {
@@ -55,10 +73,13 @@ mat-chip {
   text-align: left;
   width: 100%;
   font-weight: bold;
-  margin-bottom: 15px; /* Aumenta espacio entre título y tabla */
-  margin-top: 30px; /* Espacio superior entre secciones */
+  margin-bottom: 20px; /* Aumentamos espacio entre el título y la tabla */
+  margin-top: 40px; /* Mayor separación entre secciones */
 }
 
+.table-wrapper {
+  margin-bottom: 20px; /* Agregar separación */
+}
 
 .content {
   flex-grow: 1; /* Asegura que el contenido crezca según lo necesario */
@@ -85,7 +106,13 @@ mat-chip {
 .mat-table {
   border-radius: 8px;
   overflow: hidden;
-  margin-bottom: 20px; /* Espacio entre cada tabla */
+  margin-bottom: 10px !important; /* Forzar el margen */
+  display: block; /* Asegurar que respeta el margen */
+}
+
+/* Agregar margen adicional si es necesario */
+table + .day-header {
+  margin-top: 60px !important;
 }
 
 .avatar-img {
@@ -94,4 +121,21 @@ mat-chip {
   border-radius: 50%; /* Hace la imagen redonda */
   object-fit: cover;
   border: 2px solid #ccc;
+}
+
+.day-header {
+  display: flex;
+  justify-content: space-between; /* Separa el título y el botón */
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px; /* Espacio entre el encabezado y la tabla */
+}
+
+.day-header button {
+  white-space: nowrap; /* Evita que el texto se divida en dos líneas */
+  padding: 8px 16px; /* Ajusta el relleno para mayor espacio */
+  min-width: 120px; /* Asegura un ancho mínimo suficiente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

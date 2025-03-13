@@ -14,7 +14,7 @@ export class AlarmListComponent implements OnInit {
   alarmsToday = new MatTableDataSource([
     {name: 'Alarma Personal', avatar: 'assets/pedro.jpeg', description: 'Sacar a Yuya', time: '7:00am', priority: 'Baja', owner: 'Pedro' },
     {name: 'Mamá', avatar: 'assets/mama.jpeg',  description: 'Tomar Medicamentos', time: '8:00am', priority: 'Alta', owner: 'Mamá' },
-    {name: 'Alarma Personal', avatar: 'assets/pedro.jpeg', description: 'Rebajas Librería', time: '7:00am', priority: 'Baja', owner: 'Pedro' },
+    {name: 'Alarma Personal', avatar: 'assets/pedro.jpeg', description: 'Rebajas Librería', time: '7:00am', priority: 'Media', owner: 'Pedro' },
   ]);
 
   alarmsTomorrow = new MatTableDataSource([
