@@ -35,7 +35,7 @@
 
 /* Estilo del título */
 .header-title {
-  font-size: 24px;
+  font-size: 36px;
 }
 
 /* Avatar alineado a la derecha */
@@ -105,6 +105,7 @@
   justify-content: center;
   align-items: flex-start; /* Alinea el contenido correctamente */
 }
+
 
 /* Usa un pseudo-elemento para aplicar la opacidad solo al fondo */
 .content::before {

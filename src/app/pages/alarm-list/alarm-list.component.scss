@@ -1,0 +1,97 @@
+html, body {
+  height: auto; /* Permite que el contenido determine la altura */
+  overflow-y: auto; /* Habilita el scroll si el contenido es más largo */
+}
+
+.alarm-list-container {
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  text-align: center;
+  //margin-left: -230px; /* Posicionar para alinear con el texto */
+  margin-top: 10px; /* Ajusta la distancia desde el header */
+}
+.empty-state {
+  max-width: 500px;
+
+}
+
+.mat-table {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 10px;
+  margin-bottom: 30px; /* Espacio entre tablas */
+}
+
+
+mat-chip {
+  font-weight: bold;
+  color: white;
+}
+
+.baja {
+  background-color: blue;
+}
+
+.media {
+  background-color: orange;
+}
+
+.alta {
+  background-color: red;
+}
+
+.new-alarm-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.day-label {
+  text-align: left;
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 15px; /* Aumenta espacio entre título y tabla */
+  margin-top: 30px; /* Espacio superior entre secciones */
+}
+
+
+.content {
+  flex-grow: 1; /* Asegura que el contenido crezca según lo necesario */
+  width: 100%;
+}
+
+/* Alternar colores entre filas */
+.alarm-row:nth-child(even) td {
+  background-color: white !important; /* Azul claro */
+}
+
+.alarm-row:nth-child(odd) td {
+  background-color: #e3f2fd !important; /* Blanco */
+}
+
+
+/* Ajusta el padding y los bordes para que se vea más limpio */
+.mat-cell {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Separa las tablas con un margen */
+.mat-table {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px; /* Espacio entre cada tabla */
+}
+
+.avatar-img {
+  width: 40px;  /* Tamaño del avatar */
+  height: 40px;
+  border-radius: 50%; /* Hace la imagen redonda */
+  object-fit: cover;
+  border: 2px solid #ccc;
+}

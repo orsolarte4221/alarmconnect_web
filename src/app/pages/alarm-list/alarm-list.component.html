@@ -1,18 +1,137 @@
-<mat-card>
-  <mat-card-title>Lista de Alarmas</mat-card-title>
-  <mat-list>
-    <mat-list-item *ngFor="let alarm of alarms">
-      <mat-icon matListIcon>notifications</mat-icon>
-      <h3 matLine>{{ alarm.name }}</h3>
-      <p matLine>{{ alarm.time | date:'shortTime' }}</p>
-      <mat-chip [color]="alarm.priority">{{ alarm.priority | uppercase }}</mat-chip>
-      <button mat-icon-button (click)="editAlarm(alarm)">
-        <mat-icon>edit</mat-icon>
-      </button>
-      <button mat-icon-button (click)="deleteAlarm(alarm)">
-        <mat-icon>delete</mat-icon>
-      </button>
-    </mat-list-item>
-  </mat-list>
-</mat-card>
+<div class="alarm-list-container">
+  <div *ngIf="contenido === 'vacio'" class="empty-state">
+    <h5>Lista de Alarmas</h5>
+    <p>Bienvenido Pedro, haz clic en el botón <button mat-raised-button color="primary" routerLink="/nueva-alarma">Nueva Alarma</button> para crear tu primera alarma!</p>
+  </div>
 
+  <div *ngIf="contenido === 'lleno'">
+    <h5>Lista de Alarmas</h5>
+    <p class="day-label">Hoy</p>
+    <table mat-table [dataSource]="alarmsToday" class="mat-elevation-z8">
+      <ng-container matColumnDef="priority">
+        <th mat-header-cell *matHeaderCellDef> Prioridad </th>
+        <td mat-cell *matCellDef="let alarm">
+          <mat-chip [ngClass]="alarm.priority.toLowerCase()">{{ alarm.priority }}</mat-chip>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="avatar">
+        <th mat-header-cell *matHeaderCellDef> Avatar </th>
+        <td mat-cell *matCellDef="let alarm">
+          <img [src]="alarm.avatar" class="avatar-img" alt="Avatar de {{ alarm.owner }}">
+        </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let alarm">{{ alarm.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef> Descripción </th>
+        <td mat-cell *matCellDef="let alarm">{{ alarm.description }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="time">
+        <th mat-header-cell *matHeaderCellDef> Fecha </th>
+        <td mat-cell *matCellDef="let alarm">{{ alarm.time }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let alarm">
+          <button mat-icon-button><mat-icon>visibility</mat-icon></button>
+        </td>
+      </ng-container>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="alarm-row"></tr>
+    </table>
+
+    <p class="day-label">Mañana</p>
+    <table mat-table [dataSource]="alarmsTomorrow" class="mat-elevation-z8">
+      <ng-container matColumnDef="priority">
+        <th mat-header-cell *matHeaderCellDef> Prioridad </th>
+        <td mat-cell *matCellDef="let alarm">
+          <mat-chip [ngClass]="alarm.priority.toLowerCase()">{{ alarm.priority }}</mat-chip>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="owner">
+        <th mat-header-cell *matHeaderCellDef> Propietario </th>
+        <td mat-cell *matCellDef="let alarm">{{ alarm.owner }}</td>
+      </ng-container>
+      <ng-container matColumnDef="avatar">
+        <th mat-header-cell *matHeaderCellDef> Avatar </th>
+        <td mat-cell *matCellDef="let alarm">
+          <img [src]="alarm.avatar" class="avatar-img" alt="Avatar de {{ alarm.owner }}">
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let alarm">{{ alarm.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef> Descripción </th>
+        <td mat-cell *matCellDef="let alarm">{{ alarm.description }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="time">
+        <th mat-header-cell *matHeaderCellDef> Fecha </th>
+        <td mat-cell *matCellDef="let alarm">{{ alarm.time }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let alarm">
+          <button mat-icon-button><mat-icon>visibility</mat-icon></button>
+        </td>
+      </ng-container>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="alarm-row"></tr>
+    </table>
+
+    <p class="day-label">Proximamente</p>
+    <table mat-table [dataSource]="alarmsCommingSoon" class="mat-elevation-z8">
+      <ng-container matColumnDef="priority">
+        <th mat-header-cell *matHeaderCellDef> Prioridad </th>
+        <td mat-cell *matCellDef="let alarm">
+          <mat-chip [ngClass]="alarm.priority.toLowerCase()">{{ alarm.priority }}</mat-chip>
+        </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="avatar">
+        <th mat-header-cell *matHeaderCellDef> Avatar </th>
+        <td mat-cell *matCellDef="let alarm">
+          <img [src]="alarm.avatar" class="avatar-img" alt="Avatar de {{ alarm.owner }}">
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let alarm">{{ alarm.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef> Descripción </th>
+        <td mat-cell *matCellDef="let alarm">{{ alarm.description }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="time">
+        <th mat-header-cell *matHeaderCellDef> Fecha </th>
+        <td mat-cell *matCellDef="let alarm">{{ alarm.time }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let alarm">
+          <button mat-icon-button><mat-icon>visibility</mat-icon></button>
+        </td>
+      </ng-container>
+
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="alarm-row"></tr>
+    </table>
+
+  </div>
+</div>
