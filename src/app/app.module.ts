@@ -15,13 +15,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatTableModule } from '@angular/material/table';
 import { NuevaAlarmaTipoComponent } from './pages/nueva-alarma-tipo/nueva-alarma-tipo.component';
+import { CrearAlarmaComponent } from './pages/crear-alarma/crear-alarma.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainLayoutComponent,
     AlarmListComponent,
-    NuevaAlarmaTipoComponent
+    NuevaAlarmaTipoComponent,
+    CrearAlarmaComponent
   ],
   imports: [
     BrowserModule,

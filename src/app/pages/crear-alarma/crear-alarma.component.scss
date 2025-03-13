@@ -1,0 +1,81 @@
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+.crear-alarma-container {
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  text-align: center;
+  //margin-top: 30px;
+  max-width: 500px;
+}
+
+/* 🔹 Separación entre filas */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Antes 15px */
+}
+
+h5 {
+  margin-bottom: 40px;
+}
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px; /* 🔹 Mayor separación */
+}
+
+label {
+  width: 150px; /* Mantiene el tamaño fijo para alineación */
+  text-align: right; /* 🔹 Alinea el texto a la derecha */
+  display: flex;
+  justify-content: flex-end; /* 🔹 Asegura que se pegue a la derecha */
+  white-space: nowrap; /* 🔹 Evita que el texto se divida en varias líneas */
+}
+
+input, select, button {
+  flex: 1;
+  padding: 10px; /* 🔹 Más espacio en los inputs */
+  font-size: 16px;
+  border-radius: 6px; /* 🔹 Bordes más suaves */
+  border: 1px solid #ccc;
+}
+
+.nota-voz {
+  display: flex;
+  gap: 12px; /* 🔹 Más espacio entre los botones */
+}
+
+.nota-voz button {
+  background-color: #5c6bc0;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.guardar-btn {
+  background-color: #5c6bc0;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  width: 200px; /* 🔹 Botón más pequeño */
+  align-self: center; /* 🔹 Centrar el botón en el formulario */
+}
+
+.guardar-btn:hover {
+  background-color: #3f51b5;
+}
