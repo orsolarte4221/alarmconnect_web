@@ -1,14 +1,14 @@
 <div class="alarm-list-container">
   <div *ngIf="contenido === 'vacio'" class="empty-state">
     <h5>Lista de Alarmas</h5>
-    <p>Bienvenido Pedro, haz clic en el botón <button mat-raised-button color="primary" routerLink="/nueva-alarma">Nueva Alarma</button> para crear tu primera alarma!</p>
+    <p>Bienvenido Pedro, haz clic en el botón <button mat-raised-button color="primary" routerLink="/nueva-alarma-tipo">Nueva Alarma</button> para crear tu primera alarma!</p>
   </div>
 
   <div *ngIf="contenido === 'lleno'">
     <h5>Lista de Alarmas</h5>
     <div class="day-header">
       <p class="day-label">Hoy</p>
-      <button mat-raised-button color="primary" routerLink="/nueva-alarma">Nueva Alarma</button>
+      <button mat-raised-button color="primary" routerLink="/nueva-alarma-tipo">Nueva Alarma</button>
     </div>
 
     <div class="table-wrapper">

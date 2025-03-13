@@ -14,12 +14,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatTableModule } from '@angular/material/table';
+import { NuevaAlarmaTipoComponent } from './pages/nueva-alarma-tipo/nueva-alarma-tipo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainLayoutComponent,
-    AlarmListComponent
+    AlarmListComponent,
+    NuevaAlarmaTipoComponent
   ],
   imports: [
     BrowserModule,

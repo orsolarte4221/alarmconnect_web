@@ -1,0 +1,20 @@
+<div class="nueva-alarma-container">
+  <h5>Crear nueva alarma</h5>
+  <p>Selecciona el tipo de alarma:</p>
+
+  <div class="alarm-options">
+    <!-- Opción de Alarma Personal -->
+    <div class="alarm-option" (click)="seleccionarTipo('personal')">
+      <mat-icon class="icon-person">person</mat-icon>
+      <p><strong>Personal</strong></p>
+      <p class="alarm-description">(La alarma solo sonará en tu celular)</p>
+    </div>
+
+    <!-- Opción de Contacto de Confianza -->
+    <div class="alarm-option" (click)="seleccionarTipo('confianza')">
+      <mat-icon class="icon-contacts">groups</mat-icon>
+      <p><strong>Contacto de Confianza</strong></p>
+      <p class="alarm-description">(La alarma sonará en el celular de otra persona)</p>
+    </div>
+  </div>
+</div>
