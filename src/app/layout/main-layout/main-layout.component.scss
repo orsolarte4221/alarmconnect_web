@@ -42,14 +42,14 @@
 .avatar-container {
   display: flex;
   align-items: center;
-  gap: 10px; /* Espacio entre el nombre y el avatar */
+  gap: 10px;
   margin-right: 50px;
 }
 
 /* Imagen del avatar */
 .avatar-info {
   display: flex;
-  flex-direction: column; /* Asegura que "Mi Perfil" quede debajo del avatar */
+  flex-direction: column;
   align-items: center;
   text-align: center;
 }
@@ -74,8 +74,8 @@
   font-size: 14px;
   color: #007bff;
   text-decoration: none;
-  margin-top: 5px; /* Espacio entre el avatar y el enlace */
-  display: block; /* Para que ocupe toda la línea */
+  margin-top: 5px;
+  display: block;
 }
 
 .profile-link:hover {
@@ -94,7 +94,7 @@
   width: 250px;
   background: #f4f4f9;
   padding: 20px; /* Espaciado de 20px en todos los lados */
-  box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+  box-sizing: border-box;
 }
 
 .content {
@@ -107,7 +107,7 @@
 }
 
 
-/* Usa un pseudo-elemento para aplicar la opacidad solo al fondo */
+/* Fondo de la página */
 .content::before {
   content: "";
   position: absolute;

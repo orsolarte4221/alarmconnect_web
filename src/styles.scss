@@ -3,9 +3,9 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-/* 🔹 Personalización del Snackbar */
+/* Snackbar */
 .custom-snackbar {
-  background-color: #285b2a !important; /* 📌 Verde */
+  background-color: #285b2a !important;
   color: white !important;
   font-weight: bold;
   display: flex;
@@ -16,23 +16,23 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   border-radius: 6px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   position: fixed !important;
-  top: 140px !important; /* 📌 Justo debajo del header */
-  right: 20px !important; /* 📌 Pegado al borde derecho */
+  top: 140px !important;
+  right: 20px !important;
   min-width: 250px;
 }
 
-/* 📌 Asegurar que la caja del snackbar no tenga fondo oscuro */
+/* Sin borde Obscuro */
 .mat-mdc-snack-bar-container {
   background-color: transparent !important;
   box-shadow: none !important;
 }
 
-/* 📌 Ajustar la caja de contenido */
+/* Ajustar la caja de contenido */
 .mat-mdc-snack-bar-container .mdc-snackbar__surface {
   background-color: #285b2a !important;
 }
 
-/* 📌 Asegurar que el botón "Cerrar" esté alineado bien */
+/* Botón cerrar */
 .mat-mdc-snack-bar-actions {
   margin-left: auto !important;
 }

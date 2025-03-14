@@ -36,7 +36,7 @@ export class AlarmListComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       this.contenido = params['contenido'] || 'vacio';
 
-      // 📌 Si el mensaje es de éxito, mostrar el `MatSnackBar`
+      // Si el mensaje es de éxito, mostrar el `MatSnackBar`
       if (params['mensaje'] === 'exito') {
         this.mostrarNotificacion('Exito! La alarma se creó exitosamente!', 'Cerrar');
       }
@@ -45,10 +45,10 @@ export class AlarmListComponent implements OnInit {
 
   mostrarNotificacion(mensaje: string, accion: string) {
     const config = new MatSnackBarConfig();
-    config.duration = 3000; // 📌 Duración de 3 segundos
-    config.panelClass = ['custom-snackbar']; // 📌 Aplicar clase personalizada
-    config.horizontalPosition = 'end'; // 📌 Lo moverá a la derecha
-    config.verticalPosition = 'top'; // 📌 Para que siga debajo del header
+    config.duration = 3000; //  Duración de 3 segundos
+    config.panelClass = ['custom-snackbar']; //  Aplicar clase personalizada
+    config.horizontalPosition = 'end'; //  Lo moverá a la derecha
+    config.verticalPosition = 'top'; // Para que siga debajo del header
 
     this.snackBar.open(mensaje, accion, config);
   }

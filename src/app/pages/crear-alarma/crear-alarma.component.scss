@@ -16,7 +16,7 @@ html, body {
   max-width: 500px;
 }
 
-/* 🔹 Separación entre filas */
+/* Separación entre filas */
 form {
   display: flex;
   flex-direction: column;
@@ -30,28 +30,28 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px; /* 🔹 Mayor separación */
+  gap: 20px; /* Mayor separación */
 }
 
 label {
   width: 150px; /* Mantiene el tamaño fijo para alineación */
-  text-align: right; /* 🔹 Alinea el texto a la derecha */
+  text-align: right; /* Alinea el texto a la derecha */
   display: flex;
-  justify-content: flex-end; /* 🔹 Asegura que se pegue a la derecha */
-  white-space: nowrap; /* 🔹 Evita que el texto se divida en varias líneas */
+  justify-content: flex-end; /* Asegura que se pegue a la derecha */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
 input, select, button {
   flex: 1;
-  padding: 10px; /* 🔹 Más espacio en los inputs */
+  padding: 10px; /*  Más espacio en los inputs */
   font-size: 16px;
-  border-radius: 6px; /* 🔹 Bordes más suaves */
+  border-radius: 6px; /*  Bordes más suaves */
   border: 1px solid #ccc;
 }
 
 .nota-voz {
   display: flex;
-  gap: 12px; /* 🔹 Más espacio entre los botones */
+  gap: 12px; /* Más espacio entre los botones */
 }
 
 .nota-voz button {
@@ -72,8 +72,8 @@ input, select, button {
   border: none;
   cursor: pointer;
   border-radius: 6px;
-  width: 200px; /* 🔹 Botón más pequeño */
-  align-self: center; /* 🔹 Centrar el botón en el formulario */
+  width: 200px; /*  Botón más pequeño */
+  align-self: center; /*  Centrar el botón en el formulario */
 }
 
 .guardar-btn:hover {
@@ -84,33 +84,33 @@ input, select, button {
 input, select, button {
   flex: 1;
   padding: 10px;
-  font-size: 16px; /* 📌 Tamaño de letra uniforme */
-  font-family: 'Arial', sans-serif; /* 📌 Usa la misma fuente que los otros elementos */
+  font-size: 16px; /* Tamaño de letra uniforme */
+  font-family: 'Arial', sans-serif; /* Usa la misma fuente que los otros elementos */
   border-radius: 6px;
   border: 1px solid #ccc;
 }
 
-/* 🔹 Aplicar el mismo estilo al input datetime-local */
+/* Aplicar el mismo estilo al input datetime-local */
 input[type="datetime-local"] {
-  font-size: 16px; /* 📌 Mantener el tamaño del texto */
-  font-family: 'Arial', sans-serif; /* 📌 Fuente consistente */
-  color: #333; /* 📌 Color del texto */
-  background-color: white; /* 📌 Mantener el fondo blanco */
-  border: 1px solid #ccc; /* 📌 Bordes iguales a los demás */
+  font-size: 16px; /*  Mantener el tamaño del texto */
+  font-family: 'Arial', sans-serif; /*  Fuente consistente */
+  color: #333; /*  Color del texto */
+  background-color: white; /* Mantener el fondo blanco */
+  border: 1px solid #ccc; /* Bordes iguales a los demás */
   padding: 10px;
   border-radius: 6px;
 }
 
 /* 🔹 Ajustar el color del placeholder en datetime-local */
 input[type="datetime-local"]::placeholder {
-  color: #888; /* 📌 Color gris para el placeholder */
+  color: #888; /* Color gris para el placeholder */
   font-size: 16px;
   font-family: 'Arial', sans-serif;
 }
 
 /* 🔹 Ajustar el icono del selector de fecha */
 input[type="datetime-local"]::-webkit-calendar-picker-indicator {
-  filter: invert(40%); /* 📌 Hace que el icono sea más visible en fondos claros */
+  filter: invert(40%); /*  Hace que el icono sea más visible en fondos claros */
   cursor: pointer;
 }
 
