@@ -32,4 +32,7 @@ export class CrearAlarmaComponent implements OnInit {
     }, 500); // Simula un pequeño delay antes de redirigir
   }
 
+  navigateToContactSelection() {
+    this.router.navigate(['/select-contact']);
+  }
 }

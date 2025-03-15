@@ -55,7 +55,7 @@ input, select, button {
 }
 
 .nota-voz button {
-  background-color: #5c6bc0;
+  background-color: #555992;
   color: white;
   border: none;
   cursor: pointer;
@@ -65,13 +65,13 @@ input, select, button {
 }
 
 .guardar-btn {
-  background-color: #5c6bc0;
+  background-color: #555992;
   color: white;
   padding: 12px;
   font-size: 16px;
   border: none;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 100px;
   width: 200px; /*  Botón más pequeño */
   align-self: center; /*  Centrar el botón en el formulario */
 }

@@ -1,0 +1,53 @@
+.select-contact-container {
+  text-align: center;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #fcf8ff;
+}
+
+.alert-message {
+  color: white;
+  background: #1f6487;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+
+.mat-mdc-header-cell, .mat-mdc-cell {
+  border-bottom: none;
+}
+
+.table-avatar {
+  width: 40px;
+  border-radius: 40px;
+}
+
+.mat-mdc-table {
+  background-color: transparent;
+}
+.guardar-btn {
+  background-color: #555992;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 100px;
+  width: 200px; /*  Botón más pequeño */
+  align-self: center; /*  Centrar el botón en el formulario */
+}

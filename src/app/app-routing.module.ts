@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AlarmListComponent } from './pages/alarm-list/alarm-list.component';
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
-import { NuevaAlarmaTipoComponent } from './pages/nueva-alarma-tipo/nueva-alarma-tipo.component';
+import { AlarmListComponent } from './pages/alarm-list/alarm-list.component';
 import { CrearAlarmaComponent } from './pages/crear-alarma/crear-alarma.component';
+import { NuevaAlarmaTipoComponent } from './pages/nueva-alarma-tipo/nueva-alarma-tipo.component';
+import { SelectContactComponent } from './pages/select-contact/select-contact.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'alarms', pathMatch: 'full' }, // Redirige la raíz a /alarms
@@ -11,6 +12,7 @@ const routes: Routes = [
       { path: 'alarms', component: AlarmListComponent },
       { path: 'nueva-alarma-tipo', component: NuevaAlarmaTipoComponent } ,
       { path: 'crear-alarma', component: CrearAlarmaComponent },
+      { path: 'select-contact', component: SelectContactComponent },
   ]},
   { path: '**', redirectTo: 'alarms' }
 ];

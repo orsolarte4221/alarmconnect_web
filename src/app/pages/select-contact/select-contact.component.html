@@ -1,0 +1,31 @@
+<div class="select-contact-container">
+  <p class="mat-title-large">Crear nueva alarma Contacto</p>
+  <p class="alert-message mat-body-medium">Para agregar o quitar un contacto de confianza, use la aplicación Alarm Connect en su versión movil disponible en  Android Play</p>
+  <p class="mat-title-medium">Seleccione un contacto de Confianza</p>
+  <mat-form-field class="example-full-width">
+    <mat-label>Introduzca el nombre</mat-label>
+    <input type="text" matInput placeholder="Introduzca el nombre">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+  <table mat-table [dataSource]="contactsArray">
+    <ng-container matColumnDef="avatar">
+      <th mat-header-cell *matHeaderCellDef> Avatar </th>
+      <td mat-cell *matCellDef="let contacto"> <img [src]="contacto.avatar" alt="Avatar" class="table-avatar"> </td>
+    </ng-container>
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef> Nombre Completo </th>
+      <td mat-cell *matCellDef="let contacto"> {{contacto.nombre}} </td>
+    </ng-container>
+    <ng-container matColumnDef="celular">
+      <th mat-header-cell *matHeaderCellDef> Celular </th>
+      <td mat-cell *matCellDef="let contacto"> {{contacto.celular}} </td>
+    </ng-container>
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell *matCellDef="let contacto"> <mat-radio-button></mat-radio-button> </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let contactsArray; columns: columnsToDisplay"></tr>
+  </table>
+  <button type="button" class="guardar-btn" (click)="navigateToCrearAlarma()">Seleccionar Contacto</button>
+</div>
