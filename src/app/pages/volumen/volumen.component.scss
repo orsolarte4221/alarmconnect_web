@@ -1,0 +1,19 @@
+.volumen-container {
+  text-align: center;
+  padding: 20px;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.guardar-btn {
+  background-color: #555992;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 100px;
+  width: 200px; /*  Botón más pequeño */
+  align-self: center; /*  Centrar el botón en el formulario */
+}

@@ -8,7 +8,7 @@
 
     <div class="form-group">
       <label for="contacto">Contacto de confianza</label>
-      <input type="text" id="contacto" placeholder="Buscar por Nombre">
+      <input type="text" id="contacto" placeholder="Buscar por Nombre" (focus)="navigateToContactSelection()">
     </div>
 
     <div class="form-group">
@@ -20,7 +20,7 @@
     <div class="form-group">
       <label>Nota de Voz</label>
       <div class="nota-voz">
-        <button type="button">🎤 Grabar</button>
+        <button type="button" (click)="navigateToVoiceNote()">🎤 Grabar</button>
         <button type="button">▶ Reproducir</button>
         <button type="button">🗑 Eliminar</button>
       </div>
@@ -47,7 +47,7 @@
 
     <div class="form-group">
       <label for="volumen">Volumen Vibración</label>
-      <select id="volumen">
+      <select id="volumen" (click)="navigateToVolumen()">
         <option>Volumen 50%</option>
         <option>Volumen 80% Vibrar</option>
         <option>Máximo</option>

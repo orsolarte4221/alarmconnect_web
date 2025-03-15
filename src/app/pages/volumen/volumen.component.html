@@ -1,0 +1,17 @@
+<div class="volumen-container">
+  <h5 class="mat-title-large">Configuración de Volumen</h5>
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Nombre Alarma</mat-label>
+    <input type="text" matInput value="Tomar Medicamentos" disabled>
+  </mat-form-field>
+  <mat-slider
+    thumbLabel
+    tickInterval="1"
+    min="0"
+    max="100"
+  >
+    <input matSliderThumb [(ngModel)]="sliderValue">
+  </mat-slider>
+  <mat-checkbox class="example-margin" [(ngModel)]="vibrate">Vibrar</mat-checkbox>
+  <button type="button" class="guardar-btn" (click)="navigateToCrearAlarma()">Guardar</button>
+</div>
