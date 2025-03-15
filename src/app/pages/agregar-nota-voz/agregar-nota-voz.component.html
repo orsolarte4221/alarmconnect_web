@@ -1,0 +1,20 @@
+<div class="agregar-nota-voz-container">
+  <h5 class="mat-title-large">Agregar Nota de Voz</h5>
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Nombre Alarma</mat-label>
+    <input type="text" matInput value="Tomar Medicamentos" disabled>
+  </mat-form-field>
+  <div *ngIf="audioLoaded" id="waveform"></div>
+  <div class="nota-voz">
+    <button *ngIf="!audioLoaded" mat-icon-button type="button" (click)="recordAudio()" [disabled]="audioLoaded" class="error" >
+      <mat-icon>mic</mat-icon>
+    </button>
+    <button *ngIf="audioLoaded" mat-icon-button type="button" (click)="playAudio()" [disabled]="!audioLoaded">
+      <mat-icon>play_arrow</mat-icon>
+    </button>
+    <button *ngIf="audioLoaded" mat-icon-button type="button" [disabled]="!audioLoaded" (click)="clearAudio()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+  <button *ngIf="audioLoaded" type="button" class="guardar-btn" (click)="navigateToCrearAlarma()">Guardar</button>
+</div>

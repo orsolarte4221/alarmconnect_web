@@ -17,6 +17,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
+import { AgregarNotaVozComponent } from './pages/agregar-nota-voz/agregar-nota-voz.component';
 import { AlarmListComponent } from './pages/alarm-list/alarm-list.component';
 import { CrearAlarmaComponent } from './pages/crear-alarma/crear-alarma.component';
 import { NuevaAlarmaTipoComponent } from './pages/nueva-alarma-tipo/nueva-alarma-tipo.component';
@@ -29,7 +30,8 @@ import { SelectContactComponent } from './pages/select-contact/select-contact.co
     AlarmListComponent,
     NuevaAlarmaTipoComponent,
     CrearAlarmaComponent,
-    SelectContactComponent
+    SelectContactComponent,
+    AgregarNotaVozComponent,
   ],
   imports: [
     BrowserModule,

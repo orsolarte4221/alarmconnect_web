@@ -35,4 +35,9 @@ export class CrearAlarmaComponent implements OnInit {
   navigateToContactSelection() {
     this.router.navigate(['/select-contact']);
   }
+
+  navigateToVoiceNote() {
+    this.router.navigate(['/agregar-nota-voz']);
+  }
+
 }

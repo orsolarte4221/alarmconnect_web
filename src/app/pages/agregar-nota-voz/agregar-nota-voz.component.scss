@@ -1,0 +1,24 @@
+#waveform {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 16px;
+}
+.agregar-nota-voz-container {
+    text-align: center;
+    padding: 20px;
+    width: 50vw;
+  }
+  .mat-mdc-icon-button.error {
+    color: tomato;
+  }
+  .guardar-btn {
+    background-color: #555992;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 100px;
+    width: 200px; /*  Botón más pequeño */
+    align-self: center; /*  Centrar el botón en el formulario */
+  } 
