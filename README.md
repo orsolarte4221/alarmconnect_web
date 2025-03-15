@@ -1,27 +1,45 @@
-# Alarmconnect
+# Alarm Connect - App Web
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
+## Integrantes
+- **Santiago Alvarez**  
+- **Orlando Solarte**  
 
-## Development server
+## Funcionalidad y Pantallas
+La aplicación presenta el flujo completo de creación de una alarma en Alarm Connect.  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Orlando Solarte
+1. Pantalla Lista de Alarmas y Layout principal  
+2. Pantalla Nueva Alarma Tipo  
+3. Pantalla Crear Alarma  
 
-## Code scaffolding
+### Santiago Alvarez
+1. Pantalla Seleccionar Contacto de Confianza  
+2. Pantalla Grabar Nota de Voz  
+3. Pantalla Configuración Volumen y Grabación  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Tecnologías
+La aplicación fue desarrollada utilizando:  
+- Angular - Framework para aplicaciones web  
+- Angular Material - Librería de UI para Angular  
 
-## Build
+## Instalación
+Para ejecutar **Alarm Connect** en tu entorno local, sigue estos pasos:  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 1. Clonar el repositorio  
+```sh
+git clone https://github.com/orsolarte4221/alarmconnect_web.git
+cd alarmconnect_web
+```
 
-## Running unit tests
+### 2. Instalar dependencias  
+Ejecuta el siguiente comando para instalar los paquetes requeridos:  
+```sh
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 3. Ejecutar la aplicación en modo desarrollo  
+```sh
+ng serve
+```
+Luego, abre **http://localhost:4200/** en tu navegador.  
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
