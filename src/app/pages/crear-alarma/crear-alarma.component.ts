@@ -40,4 +40,8 @@ export class CrearAlarmaComponent implements OnInit {
     this.router.navigate(['/agregar-nota-voz']);
   }
 
+  navigateToVolumen() {
+    this.router.navigate(['/volumen']);
+  }
+
 }

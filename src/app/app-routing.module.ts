@@ -6,6 +6,7 @@ import { AlarmListComponent } from './pages/alarm-list/alarm-list.component';
 import { CrearAlarmaComponent } from './pages/crear-alarma/crear-alarma.component';
 import { NuevaAlarmaTipoComponent } from './pages/nueva-alarma-tipo/nueva-alarma-tipo.component';
 import { SelectContactComponent } from './pages/select-contact/select-contact.component';
+import { VolumenComponent } from './pages/volumen/volumen.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'alarms', pathMatch: 'full' }, // Redirige la raíz a /alarms
@@ -15,6 +16,7 @@ const routes: Routes = [
       { path: 'crear-alarma', component: CrearAlarmaComponent },
       { path: 'select-contact', component: SelectContactComponent },
       { path: 'agregar-nota-voz', component: AgregarNotaVozComponent },
+      { path: 'volumen', component: VolumenComponent },
   ]},
   { path: '**', redirectTo: 'alarms' }
 ];
